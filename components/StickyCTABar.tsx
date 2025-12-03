@@ -57,7 +57,7 @@ const StickyCTABar = () => {
                           <p className="font-semibold text-gray-900 dark:text-white text-xs sm:text-sm truncate">
                             Ready to start your project?
                           </p>
-                          <p className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400 truncate hidden xs:block">
+                          <p className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400 truncate hidden sm:block">
                             Get a free consultation today!
                           </p>
                         </div>
