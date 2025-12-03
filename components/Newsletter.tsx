@@ -137,8 +137,8 @@ export function Newsletter({ variant = 'default', className = '' }: NewsletterPr
 
   // Default variant - Full card
   return (
-    <Card className={`p-8 text-center ${className}`}>
-      <div className="mb-6">
+    <Card className={`p-4 sm:p-8 text-center ${className}`}>
+      <div className="mb-4 sm:mb-6">
         <motion.div
           animate={{ 
             rotate: [0, 10, -10, 0],
@@ -149,30 +149,30 @@ export function Newsletter({ variant = 'default', className = '' }: NewsletterPr
             repeat: Infinity,
             repeatDelay: 3
           }}
-          className="text-4xl mb-4"
+          className="text-3xl sm:text-4xl mb-3 sm:mb-4"
         >
           📧
         </motion.div>
-        <Badge variant="success" className="mb-4">
+        <Badge variant="success" className="mb-3 sm:mb-4">
           Free Newsletter
         </Badge>
-        <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">
+        <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-gray-900 dark:text-white">
           Subscribe to Our Newsletter
         </h3>
-        <p className="text-gray-600 dark:text-gray-300 max-w-md mx-auto">
+        <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 max-w-md mx-auto">
           Get weekly insights about web development, design trends, and business tips. 
           Join 1,000+ subscribers who trust our content.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="flex flex-col sm:flex-row gap-3">
+      <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+            className="flex-1 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-sm sm:text-base"
             required
           />
           <Button 
@@ -185,7 +185,7 @@ export function Newsletter({ variant = 'default', className = '' }: NewsletterPr
           </Button>
         </div>
 
-        <div className="flex items-center justify-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-500 dark:text-gray-400">
           <span className="flex items-center gap-1">
             ✅ No spam
           </span>
@@ -202,12 +202,12 @@ export function Newsletter({ variant = 'default', className = '' }: NewsletterPr
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="mt-6 p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800"
+          className="mt-4 sm:mt-6 p-3 sm:p-4 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800"
         >
-          <div className="text-green-600 dark:text-green-400 font-medium mb-2">
+          <div className="text-green-600 dark:text-green-400 font-medium mb-1 sm:mb-2 text-sm sm:text-base">
             🎉 Welcome to our community!
           </div>
-          <p className="text-green-700 dark:text-green-300 text-sm">
+          <p className="text-green-700 dark:text-green-300 text-xs sm:text-sm">
             Thank you for subscribing! Check your email for a confirmation link and your first newsletter.
           </p>
         </motion.div>
@@ -217,33 +217,33 @@ export function Newsletter({ variant = 'default', className = '' }: NewsletterPr
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="mt-6 p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-200 dark:border-red-800"
+          className="mt-4 sm:mt-6 p-3 sm:p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-200 dark:border-red-800"
         >
-          <div className="text-red-600 dark:text-red-400 font-medium mb-2">
+          <div className="text-red-600 dark:text-red-400 font-medium mb-1 sm:mb-2 text-sm sm:text-base">
             ❌ Subscription Failed
           </div>
-          <p className="text-red-700 dark:text-red-300 text-sm">
+          <p className="text-red-700 dark:text-red-300 text-xs sm:text-sm">
             {error}
           </p>
         </motion.div>
       )}
 
       {/* Social Proof */}
-      <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-        <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+      <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-200 dark:border-gray-700">
+        <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-2 sm:mb-3">
           Trusted by professionals from:
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-4 text-xs text-gray-400 dark:text-gray-500">
-          <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full">
+        <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-4 text-[10px] sm:text-xs text-gray-400 dark:text-gray-500">
+          <span className="px-2 sm:px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full">
             Startup
           </span>
-          <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full">
+          <span className="px-2 sm:px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full">
             Tech Companies
           </span>
-          <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full">
+          <span className="px-2 sm:px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full">
             UMKM
           </span>
-          <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full">
+          <span className="px-2 sm:px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full">
             Agencies
           </span>
         </div>

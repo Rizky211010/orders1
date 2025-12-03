@@ -148,23 +148,23 @@ const WebDevelopmentSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 lg:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-6 font-poppins">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold gradient-text mb-4 sm:mb-6 font-poppins">
             Web Development
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2 sm:px-0">
             Kami membantu Anda membangun website profesional untuk mendukung bisnis Anda secara digital dengan teknologi terdepan dan desain modern.
           </p>
         </motion.div>
 
         {/* Services Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -177,7 +177,7 @@ const WebDevelopmentSection = () => {
               variants={cardVariants}
             >
               <motion.div
-                className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 h-full hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
+                className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border border-gray-100 dark:border-gray-700 h-full hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
                 whileHover={{ 
                   scale: 1.05,
                   y: -10
@@ -195,28 +195,28 @@ const WebDevelopmentSection = () => {
                 <div className="relative z-10">
                   {/* Icon */}
                   <motion.div
-                    className="w-16 h-16 bg-gradient-to-br from-blue-500 to-orange-500 rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300"
+                    className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-500 to-orange-500 rounded-lg sm:rounded-xl flex items-center justify-center text-white mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300"
                     whileHover={{ rotate: 5 }}
                   >
                     {service.icon}
                   </motion.div>
 
                   {/* Title */}
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                     {service.description}
                   </p>
 
                   {/* Features List */}
-                  <ul className="space-y-3">
+                  <ul className="space-y-2 sm:space-y-3">
                     {service.features.map((feature, featureIndex) => (
                       <motion.li
                         key={featureIndex}
-                        className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300"
+                        className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-gray-600 dark:text-gray-300"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ 
@@ -225,7 +225,7 @@ const WebDevelopmentSection = () => {
                         }}
                         viewport={{ once: true }}
                       >
-                        <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full flex-shrink-0" />
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full flex-shrink-0" />
                         {feature}
                       </motion.li>
                     ))}
@@ -233,12 +233,12 @@ const WebDevelopmentSection = () => {
 
                   {/* CTA Button */}
                   <motion.button
-                    className="mt-8 w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-orange-500 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn"
+                    className="mt-4 sm:mt-6 lg:mt-8 w-full px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-blue-500 to-orange-500 text-white font-semibold rounded-lg sm:rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn text-sm sm:text-base"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
                     Pelajari Lebih Lanjut
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                   </motion.button>
                 </div>
               </motion.div>
@@ -255,12 +255,12 @@ const WebDevelopmentSection = () => {
           viewport={{ once: true }}
         >
           <motion.button
-            className="px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-3 group"
+            className="px-6 sm:px-10 py-3 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2 sm:gap-3 group text-sm sm:text-base"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Konsultasi Gratis Sekarang
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </motion.button>
         </motion.div>
       </div>

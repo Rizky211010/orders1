@@ -1,20 +1,8 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Providers from '@/components/Providers'
-
-const geistSans = Inter({ 
-  subsets: ['latin'],
-  variable: '--font-geist-sans'
-})
-
-const geistMono = Poppins({ 
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-geist-mono'
-})
 
 export const metadata: Metadata = {
   title: 'ORDERS.ID - Solusi Digital Anda, Dari Ide hingga Realisasi',
@@ -54,7 +42,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className="font-sans antialiased">
         <Providers>
           <Navbar />
           {children}
